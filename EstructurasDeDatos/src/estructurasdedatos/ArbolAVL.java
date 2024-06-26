@@ -4,10 +4,6 @@
  */
 package estructurasdedatos;
 
-/**
- *
- * @author juanc
- */
 public class ArbolAVL {
 
     NodosArbolAVL raiz;
