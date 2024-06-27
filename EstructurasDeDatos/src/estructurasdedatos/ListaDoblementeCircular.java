@@ -4,10 +4,6 @@
  */
 package estructurasdedatos;
 
-/**
- *
- * @author juanc
- */
 public class ListaDoblementeCircular extends Lista {
     private NodoListas cabeza;
     private NodoListas cola;
