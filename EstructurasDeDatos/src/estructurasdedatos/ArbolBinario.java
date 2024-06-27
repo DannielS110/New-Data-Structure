@@ -4,11 +4,6 @@
  */
 package estructurasdedatos;
 
-/**
- *
- * @author juanc
- */
-public class ArbolBinario extends EstructuraDato {
     int altura;
     NodosArbol raiz;
     int ramas;
