@@ -4,10 +4,6 @@
  */
 package estructurasdedatos;
 
-/**
- *
- * @author juanc
- */
 public abstract class EstructuraDato {
 
     abstract void insertar(int valor);
