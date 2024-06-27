@@ -4,10 +4,7 @@
  */
 package estructurasdedatos;
 
-/**
- *
- * @author juanc
- */
+
 public class ArbolRojoNegro extends ArbolBinario implements Recorridos {
 
     private static final Colores ROJO = Colores.ROJO;
