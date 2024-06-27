@@ -4,10 +4,6 @@
  */
 package estructurasdedatos;
 
-/**
- *
- * @author juanc
- */
 import java.util.*;
 
 public class Grafo extends EstructuraDato {
