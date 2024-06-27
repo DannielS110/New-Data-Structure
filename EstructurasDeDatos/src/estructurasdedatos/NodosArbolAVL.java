@@ -4,10 +4,6 @@
  */
 package estructurasdedatos;
 
-/**
- *
- * @author juanc
- */
 public class NodosArbolAVL {
     int valor;
     NodosArbolAVL izquierdo, derecho;
