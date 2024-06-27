@@ -4,10 +4,6 @@
  */
 package estructurasdedatos;
 
-/**
- *
- * @author juanc
- */
 public class ListaCircular extends Lista {
     protected NodoListas cabeza;
     protected NodoListas cola;
