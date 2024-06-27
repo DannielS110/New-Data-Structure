@@ -4,10 +4,6 @@
  */
 package estructurasdedatos;
 
-/**
- *
- * @author juanc
- */
 public class ListaEnlazada extends Lista {
     private NodoListas cabeza;
     private int size;
