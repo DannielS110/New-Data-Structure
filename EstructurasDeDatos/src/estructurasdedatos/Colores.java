@@ -4,10 +4,6 @@
  */
 package estructurasdedatos;
 
-/**
- *
- * @author juanc
- */
 public enum Colores {
     NEGRO, 
     ROJO;      
