@@ -4,10 +4,7 @@
  */
 package estructurasdedatos;
 
-/**
- *
- * @author juanc
- */
+
 public class ArbolSimple extends ArbolBinario implements Recorridos{
     // Método para insertar un nuevo nodo en el árbol
     @Override
