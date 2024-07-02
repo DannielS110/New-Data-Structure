@@ -25,40 +25,36 @@ public class VistaPrincipal extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         btnArbolSimple = new javax.swing.JButton();
         btnArbolRN = new javax.swing.JButton();
         btnArbolAVL = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         btnListasEnlazadas = new javax.swing.JButton();
         btnListasDobleEnlazadas = new javax.swing.JButton();
         ListaCircular = new javax.swing.JButton();
         ListaDobleCircular = new javax.swing.JButton();
         btnGrafo = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
 
         jLabel5.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("ÁRBOLES");
 
-        jPanel1.setBackground(new java.awt.Color(51, 102, 255));
+        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Trabajo de estructuras de datos y java swing");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, -1, 47));
+        jLabel1.setText("ESTRUCTURAS DE DATOS");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, -1, 47));
 
-        jLabel2.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Realizado por: Daniel Sánchez");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 79, -1, -1));
-
-        jLabel3.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Curso: Segundo Ciclo");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 115, -1, -1));
+        jLabel2.setText("Realizado por: Daniel Sánchez y Alexis Roman");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 390, -1, -1));
 
         btnArbolSimple.setBackground(new java.awt.Color(0, 204, 102));
         btnArbolSimple.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
@@ -69,7 +65,7 @@ public class VistaPrincipal extends javax.swing.JPanel {
                 btnArbolSimpleActionPerformed(evt);
             }
         });
-        jPanel1.add(btnArbolSimple, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, -1, -1));
+        jPanel1.add(btnArbolSimple, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 180, -1));
 
         btnArbolRN.setBackground(new java.awt.Color(0, 204, 102));
         btnArbolRN.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
@@ -80,7 +76,7 @@ public class VistaPrincipal extends javax.swing.JPanel {
                 btnArbolRNActionPerformed(evt);
             }
         });
-        jPanel1.add(btnArbolRN, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, -1, -1));
+        jPanel1.add(btnArbolRN, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, -1, -1));
 
         btnArbolAVL.setBackground(new java.awt.Color(0, 204, 102));
         btnArbolAVL.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
@@ -91,22 +87,11 @@ public class VistaPrincipal extends javax.swing.JPanel {
                 btnArbolAVLActionPerformed(evt);
             }
         });
-        jPanel1.add(btnArbolAVL, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 190, -1, -1));
-
-        jLabel4.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("LISTAS");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, -1, -1));
-
-        jLabel6.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("GRAFOS");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 350, -1, -1));
+        jPanel1.add(btnArbolAVL, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 170, 180, -1));
 
         jLabel7.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("ÁRBOLES");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, -1, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 230, -1, -1));
 
         btnListasEnlazadas.setBackground(new java.awt.Color(0, 204, 102));
         btnListasEnlazadas.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
@@ -117,18 +102,19 @@ public class VistaPrincipal extends javax.swing.JPanel {
                 btnListasEnlazadasActionPerformed(evt);
             }
         });
-        jPanel1.add(btnListasEnlazadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
+        jPanel1.add(btnListasEnlazadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, 180, -1));
 
         btnListasDobleEnlazadas.setBackground(new java.awt.Color(0, 204, 102));
         btnListasDobleEnlazadas.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         btnListasDobleEnlazadas.setForeground(new java.awt.Color(255, 255, 255));
         btnListasDobleEnlazadas.setText("Listas doblemente enlazadas");
+        btnListasDobleEnlazadas.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
         btnListasDobleEnlazadas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnListasDobleEnlazadasActionPerformed(evt);
             }
         });
-        jPanel1.add(btnListasDobleEnlazadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, -1, -1));
+        jPanel1.add(btnListasDobleEnlazadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, 260, 30));
 
         ListaCircular.setBackground(new java.awt.Color(0, 204, 102));
         ListaCircular.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
@@ -139,18 +125,19 @@ public class VistaPrincipal extends javax.swing.JPanel {
                 ListaCircularActionPerformed(evt);
             }
         });
-        jPanel1.add(ListaCircular, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 280, -1, -1));
+        jPanel1.add(ListaCircular, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 280, 180, -1));
 
         ListaDobleCircular.setBackground(new java.awt.Color(0, 204, 102));
         ListaDobleCircular.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         ListaDobleCircular.setForeground(new java.awt.Color(255, 255, 255));
         ListaDobleCircular.setText("Lista doblemente circular");
+        ListaDobleCircular.setHideActionText(true);
         ListaDobleCircular.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ListaDobleCircularActionPerformed(evt);
             }
         });
-        jPanel1.add(ListaDobleCircular, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, -1, -1));
+        jPanel1.add(ListaDobleCircular, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 330, 230, 30));
 
         btnGrafo.setBackground(new java.awt.Color(0, 204, 102));
         btnGrafo.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
@@ -161,17 +148,71 @@ public class VistaPrincipal extends javax.swing.JPanel {
                 btnGrafoActionPerformed(evt);
             }
         });
-        jPanel1.add(btnGrafo, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 390, -1, -1));
+        jPanel1.add(btnGrafo, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 180, -1));
+
+        jPanel4.setBackground(new java.awt.Color(51, 51, 51));
+
+        jLabel9.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Listas");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(272, Short.MAX_VALUE)
+                .addComponent(jLabel9)
+                .addGap(250, 250, 250))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addComponent(jLabel9)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 600, 40));
+
+        jPanel3.setBackground(new java.awt.Color(51, 51, 51));
+
+        jLabel8.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Grafos y Arboles");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(208, 208, 208)
+                .addComponent(jLabel8)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addComponent(jLabel8)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 600, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 609, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 597, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 427, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 457, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -323,11 +364,12 @@ public class VistaPrincipal extends javax.swing.JPanel {
     private javax.swing.JButton btnListasEnlazadas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     // End of variables declaration//GEN-END:variables
 }

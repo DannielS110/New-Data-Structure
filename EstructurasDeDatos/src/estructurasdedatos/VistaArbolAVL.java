@@ -2,6 +2,7 @@ package estructurasdedatos;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import java.awt.BorderLayout;
 
 public class VistaArbolAVL extends javax.swing.JPanel {
 
@@ -10,10 +11,14 @@ public class VistaArbolAVL extends javax.swing.JPanel {
      */
     
     private ArbolAVL arbolAVL;
+    private DibujoArbol dibujoArbol;
+
     public VistaArbolAVL() {
         arbolAVL = new ArbolAVL();
+        dibujoArbol = new DibujoArbol(arbolAVL);
         initComponents();
-        
+        jPanel2.setLayout(new BorderLayout());
+        jPanel2.add(dibujoArbol, BorderLayout.CENTER);
     }
 
     /**
@@ -35,11 +40,11 @@ public class VistaArbolAVL extends javax.swing.JPanel {
         btnRegresar = new javax.swing.JButton();
         txtValorEliminar = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        textAreaMostrarDespuesEliminar = new javax.swing.JTextArea();
         btnEliminar = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
 
-        jPanel1.setBackground(new java.awt.Color(51, 102, 255));
+        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel1.setAutoscrolls(true);
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
@@ -74,7 +79,7 @@ public class VistaArbolAVL extends javax.swing.JPanel {
         txtAreaMostrarDatos.setRows(5);
         jScrollPane1.setViewportView(txtAreaMostrarDatos);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 510, 130));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 510, 100));
 
         btnRegresar.setBackground(new java.awt.Color(255, 51, 51));
         btnRegresar.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
@@ -85,25 +90,19 @@ public class VistaArbolAVL extends javax.swing.JPanel {
                 btnRegresarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 510, -1, -1));
+        jPanel1.add(btnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 610, -1, -1));
 
         txtValorEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtValorEliminarActionPerformed(evt);
             }
         });
-        jPanel1.add(txtValorEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 300, 150, -1));
+        jPanel1.add(txtValorEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 280, 150, -1));
 
         jLabel3.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Ingrese un valor para eliminar del Arbol AVL:");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, -1, -1));
-
-        textAreaMostrarDespuesEliminar.setColumns(20);
-        textAreaMostrarDespuesEliminar.setRows(5);
-        jScrollPane2.setViewportView(textAreaMostrarDespuesEliminar);
-
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 510, 130));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, -1));
 
         btnEliminar.setBackground(new java.awt.Color(255, 102, 102));
         btnEliminar.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
@@ -114,7 +113,22 @@ public class VistaArbolAVL extends javax.swing.JPanel {
                 btnEliminarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 330, -1, -1));
+        jPanel1.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, -1, -1));
+
+        jPanel2.setAutoscrolls(true);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 510, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 250, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 510, 250));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -124,7 +138,9 @@ public class VistaArbolAVL extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 546, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 644, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 106, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -133,7 +149,7 @@ public class VistaArbolAVL extends javax.swing.JPanel {
     }//GEN-LAST:event_txtDatosEntradaActionPerformed
 
     private void btnEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarActionPerformed
-         String datosEntrada = txtDatosEntrada.getText();
+        String datosEntrada = txtDatosEntrada.getText();
         if (!datosEntrada.isEmpty()) {
             String[] valores = datosEntrada.split(" ");
             for (String valor : valores) {
@@ -146,6 +162,7 @@ public class VistaArbolAVL extends javax.swing.JPanel {
                 }
             }
             actualizarAreaMostrarDatos();
+            dibujoArbol.repaint();
         }
     }//GEN-LAST:event_btnEnviarActionPerformed
 
@@ -176,66 +193,22 @@ public class VistaArbolAVL extends javax.swing.JPanel {
             int numero = Integer.parseInt(valorEliminar);
             arbolAVL.eliminar(numero);
             actualizarAreaMostrarDatosDespuesEliminar();
+            dibujoArbol.repaint();
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(this, "Ingrese solo números enteros.");
         }
     }//GEN-LAST:event_btnEliminarActionPerformed
-private void actualizarAreaMostrarDatos() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Recorrido Inorden: ").append(obtenerRecorridoInorden()).append("\n");
-        sb.append("Recorrido Preorden: ").append(obtenerRecorridoPreorden()).append("\n");
-        sb.append("Recorrido Postorden: ").append(obtenerRecorridoPostorden()).append("\n");
-        txtAreaMostrarDatos.setText(sb.toString());
+
+    private void actualizarAreaMostrarDatos() {
+        StringBuilder datos = new StringBuilder();
+        arbolAVL.recorrerInorden();
+        txtAreaMostrarDatos.setText(datos.toString());
     }
 
     private void actualizarAreaMostrarDatosDespuesEliminar() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Recorrido Inorden: ").append(obtenerRecorridoInorden()).append("\n");
-        sb.append("Recorrido Preorden: ").append(obtenerRecorridoPreorden()).append("\n");
-        sb.append("Recorrido Postorden: ").append(obtenerRecorridoPostorden()).append("\n");
-        textAreaMostrarDespuesEliminar.setText(sb.toString());
-    }
-
-    private String obtenerRecorridoInorden() {
-        StringBuilder sb = new StringBuilder();
-        obtenerRecorridoInordenRec(arbolAVL.raiz, sb);
-        return sb.toString();
-    }
-
-    private void obtenerRecorridoInordenRec(NodosArbolAVL nodo, StringBuilder sb) {
-        if (nodo != null) {
-            obtenerRecorridoInordenRec(nodo.izquierdo, sb);
-            sb.append(nodo.valor).append(" ");
-            obtenerRecorridoInordenRec(nodo.derecho, sb);
-        }
-    }
-
-    private String obtenerRecorridoPreorden() {
-        StringBuilder sb = new StringBuilder();
-        obtenerRecorridoPreordenRec(arbolAVL.raiz, sb);
-        return sb.toString();
-    }
-
-    private void obtenerRecorridoPreordenRec(NodosArbolAVL nodo, StringBuilder sb) {
-        if (nodo != null) {
-            sb.append(nodo.valor).append(" ");
-            obtenerRecorridoPreordenRec(nodo.izquierdo, sb);
-            obtenerRecorridoPreordenRec(nodo.derecho, sb);
-        }
-    }
-
-    private String obtenerRecorridoPostorden() {
-        StringBuilder sb = new StringBuilder();
-        obtenerRecorridoPostordenRec(arbolAVL.raiz, sb);
-        return sb.toString();
-    }
-
-    private void obtenerRecorridoPostordenRec(NodosArbolAVL nodo, StringBuilder sb) {
-        if (nodo != null) {
-            obtenerRecorridoPostordenRec(nodo.izquierdo, sb);
-            obtenerRecorridoPostordenRec(nodo.derecho, sb);
-            sb.append(nodo.valor).append(" ");
-        }
+        StringBuilder datos = new StringBuilder();
+        arbolAVL.recorrerInorden();
+        txtAreaMostrarDatos.setText(datos.toString());
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -246,9 +219,8 @@ private void actualizarAreaMostrarDatos() {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea textAreaMostrarDespuesEliminar;
     private javax.swing.JTextArea txtAreaMostrarDatos;
     private javax.swing.JTextField txtDatosEntrada;
     private javax.swing.JTextField txtValorEliminar;
