@@ -11,6 +11,9 @@ import javax.swing.JPanel;
  *
  * @author Alexis y Daniel
  */
+
+//FUNCIONA PARA TODOS LOS ARBOLES
+
 public class DibujoArbol extends JPanel {
 
     private ArbolBinario arbol;
