@@ -1,13 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package estructurasdedatos;
 
-    int altura;
-    NodosArbol raiz;
-    int ramas;
-    int hojas;
+public class ArbolBinario extends EstructuraDato {
+    protected int altura;
+    protected NodosArbol raiz;
+    protected int ramas;
+    protected int hojas;
 
     // Constructor para crear un árbol vacío
     public ArbolBinario() {

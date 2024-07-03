@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package estructurasdedatos;
 
 public class ListaCircular extends Lista {
@@ -93,7 +89,7 @@ public class ListaCircular extends Lista {
         cola.nodoSiguiente = cabeza;
     }
 
-    private void validarListaCircular() {
+    public void validarListaCircular() {
         if (cabeza == null) {
             return;
         }

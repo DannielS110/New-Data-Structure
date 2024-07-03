@@ -1,13 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package estructurasdedatos;
 
 public class ListaDoblementeEnlazada extends Lista {
-    private NodoListas cabeza;
-    private NodoListas cola;
-    private int size;
+    public NodoListas cabeza;
+    public NodoListas cola;
+    public int size;
 
     public ListaDoblementeEnlazada() {
         cabeza = null;
@@ -70,4 +66,3 @@ public class ListaDoblementeEnlazada extends Lista {
         } while (swapped);
     }
 }
-

@@ -1,12 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package estructurasdedatos;
 
 import java.util.*;
 
 public class Grafo extends EstructuraDato {
+
     private Map<Integer, List<Integer>> adyacencias;
 
     public Grafo() {
@@ -71,5 +68,17 @@ public class Grafo extends EstructuraDato {
                 dfs(vecino, visitados);
             }
         }
+    }
+
+    public String obtenerConexiones() {
+        StringBuilder builder = new StringBuilder();
+        for (int nodo : adyacencias.keySet()) {
+            builder.append("Nodo ").append(nodo).append(" está conectado con: ");
+            for (int vecino : adyacencias.get(nodo)) {
+                builder.append(vecino).append(" ");
+            }
+            builder.append("\n");
+        }
+        return builder.toString();
     }
 }

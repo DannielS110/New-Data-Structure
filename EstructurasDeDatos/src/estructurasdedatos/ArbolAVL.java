@@ -1,27 +1,21 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package estructurasdedatos;
 
-public class ArbolAVL {
-
-    NodosArbolAVL raiz;
-
+public class ArbolAVL extends ArbolBinario implements Recorridos{
     // Constructor para crear un árbol AVL vacío
     public ArbolAVL() {
         raiz = null;
     }
 
     // Método para insertar un nuevo nodo en el árbol AVL
+    @Override
     public void insertar(int valor) {
         raiz = insertarRec(raiz, valor);
     }
 
     // Método recursivo para insertar un nuevo nodo
-    private NodosArbolAVL insertarRec(NodosArbolAVL nodo, int valor) {
+    private NodosArbol insertarRec(NodosArbol nodo, int valor) {
         if (nodo == null) {
-            return new NodosArbolAVL(valor);
+            return new NodosArbol(valor);
         }
 
         if (valor < nodo.valor) {
@@ -41,9 +35,9 @@ public class ArbolAVL {
     }
 
     // Método para realizar una rotación a la izquierda
-    private NodosArbolAVL rotacionIzquierda(NodosArbolAVL x) {
-        NodosArbolAVL y = x.derecho;
-        NodosArbolAVL T2 = y.izquierdo;
+    private NodosArbol rotacionIzquierda(NodosArbol x) {
+        NodosArbol y = x.derecho;
+        NodosArbol T2 = y.izquierdo;
 
         // Realizar rotación
         y.izquierdo = x;
@@ -58,9 +52,9 @@ public class ArbolAVL {
     }
 
     // Método para realizar una rotación a la derecha
-    private NodosArbolAVL rotacionDerecha(NodosArbolAVL y) {
-        NodosArbolAVL x = y.izquierdo;
-        NodosArbolAVL T2 = x.derecho;
+    private NodosArbol rotacionDerecha(NodosArbol y) {
+        NodosArbol x = y.izquierdo;
+        NodosArbol T2 = x.derecho;
 
         // Realizar rotación
         x.derecho = y;
@@ -75,12 +69,12 @@ public class ArbolAVL {
     }
 
     // Método para actualizar la altura de un nodo
-    private void actualizarAltura(NodosArbolAVL nodo) {
+    private void actualizarAltura(NodosArbol nodo) {
         nodo.altura = 1 + Math.max(altura(nodo.izquierdo), altura(nodo.derecho));
     }
 
     // Método para obtener la altura de un nodo
-    private int altura(NodosArbolAVL nodo) {
+    private int altura(NodosArbol nodo) {
         if (nodo == null) {
             return 0;
         }
@@ -88,7 +82,7 @@ public class ArbolAVL {
     }
 
     // Método para obtener el factor de balance de un nodo
-    private int obtenerBalance(NodosArbolAVL nodo) {
+    private int obtenerBalance(NodosArbol nodo) {
         if (nodo == null) {
             return 0;
         }
@@ -96,7 +90,7 @@ public class ArbolAVL {
     }
 
     // Método para equilibrar el árbol AVL
-    private NodosArbolAVL equilibrar(NodosArbolAVL nodo) {
+    private NodosArbol equilibrar(NodosArbol nodo) {
         int balance = obtenerBalance(nodo);
 
         // Caso Izquierda Izquierda
@@ -125,11 +119,12 @@ public class ArbolAVL {
     }
 
     // Métodos de recorrido del árbol AVL
+    @Override
     public void recorrerInorden() {
         recorrerInordenRec(raiz);
     }
 
-    private void recorrerInordenRec(NodosArbolAVL nodo) {
+    private void recorrerInordenRec(NodosArbol nodo) {
         if (nodo != null) {
             recorrerInordenRec(nodo.izquierdo);
             System.out.print(nodo.valor + " ");
@@ -141,7 +136,7 @@ public class ArbolAVL {
         recorrerPreordenRec(raiz);
     }
 
-    private void recorrerPreordenRec(NodosArbolAVL nodo) {
+    private void recorrerPreordenRec(NodosArbol nodo) {
         if (nodo != null) {
             System.out.print(nodo.valor + " ");
             recorrerPreordenRec(nodo.izquierdo);
@@ -153,7 +148,7 @@ public class ArbolAVL {
         recorrerPostordenRec(raiz);
     }
 
-    private void recorrerPostordenRec(NodosArbolAVL nodo) {
+    private void recorrerPostordenRec(NodosArbol nodo) {
         if (nodo != null) {
             recorrerPostordenRec(nodo.izquierdo);
             recorrerPostordenRec(nodo.derecho);
@@ -166,7 +161,7 @@ public class ArbolAVL {
         raiz = eliminarRec(raiz, valor);
     }
 
-    private NodosArbolAVL eliminarRec(NodosArbolAVL nodo, int valor) {
+    private NodosArbol eliminarRec(NodosArbol nodo, int valor) {
         if (nodo == null) {
             return nodo;
         }
@@ -178,7 +173,7 @@ public class ArbolAVL {
         } else {
             // Nodo con solo un hijo o sin hijos
             if ((nodo.izquierdo == null) || (nodo.derecho == null)) {
-                NodosArbolAVL temp = null;
+                NodosArbol temp = null;
                 if (temp == nodo.izquierdo) {
                     temp = nodo.derecho;
                 } else {
@@ -194,7 +189,7 @@ public class ArbolAVL {
                 }
             } else {
                 // Nodo con dos hijos
-                NodosArbolAVL temp = minValueNode(nodo.derecho);
+                NodosArbol temp = minValueNode(nodo.derecho);
                 nodo.valor = temp.valor;
                 nodo.derecho = eliminarRec(nodo.derecho, temp.valor);
             }
@@ -212,8 +207,8 @@ public class ArbolAVL {
     }
 
     // Obtener el nodo con el valor mínimo
-    private NodosArbolAVL minValueNode(NodosArbolAVL nodo) {
-        NodosArbolAVL current = nodo;
+    private NodosArbol minValueNode(NodosArbol nodo) {
+        NodosArbol current = nodo;
 
         // Bucle para encontrar el nodo más a la izquierda
         while (current.izquierdo != null) {
