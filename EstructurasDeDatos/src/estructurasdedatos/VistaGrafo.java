@@ -71,7 +71,11 @@ public class VistaGrafo extends javax.swing.JPanel {
             }
         });
 
+<<<<<<< HEAD
         jPanel1.setBackground(new java.awt.Color(51, 102, 255));
+=======
+        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
+>>>>>>> v2.0.0
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N

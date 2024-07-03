@@ -1,10 +1,17 @@
 package estructurasdedatos;
 
 public class ArbolBinario extends EstructuraDato {
+<<<<<<< HEAD
     int altura;
     NodosArbol raiz;
     int ramas;
     int hojas;
+=======
+    protected int altura;
+    protected NodosArbol raiz;
+    protected int ramas;
+    protected int hojas;
+>>>>>>> v2.0.0
 
     // Constructor para crear un árbol vacío
     public ArbolBinario() {

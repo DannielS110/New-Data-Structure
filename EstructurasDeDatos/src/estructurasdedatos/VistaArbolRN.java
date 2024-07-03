@@ -1,5 +1,9 @@
 package estructurasdedatos;
 
+<<<<<<< HEAD
+=======
+import java.awt.BorderLayout;
+>>>>>>> v2.0.0
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -9,10 +13,21 @@ public class VistaArbolRN extends javax.swing.JPanel {
      * Creates new form VistaArbolRN
      */
     private ArbolRojoNegro arbol;
+<<<<<<< HEAD
+=======
+    private DibujoArbol dibujoArbol;
+
+>>>>>>> v2.0.0
     
     public VistaArbolRN() {
         initComponents();
         arbol = new ArbolRojoNegro();
+<<<<<<< HEAD
+=======
+        dibujoArbol = new DibujoArbol(arbol);
+        dibujo.setLayout(new BorderLayout());
+        dibujo.add(dibujoArbol, BorderLayout.CENTER);
+>>>>>>> v2.0.0
     }
 
     /**
@@ -34,11 +49,18 @@ public class VistaArbolRN extends javax.swing.JPanel {
         btnRegresar = new javax.swing.JButton();
         txtValorEliminar = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
+<<<<<<< HEAD
         jScrollPane2 = new javax.swing.JScrollPane();
         textAreaMostrarDespuesEliminar = new javax.swing.JTextArea();
         btnEliminar = new javax.swing.JButton();
 
         jPanel1.setBackground(new java.awt.Color(51, 102, 255));
+=======
+        btnEliminar = new javax.swing.JButton();
+        dibujo = new javax.swing.JPanel();
+
+        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
+>>>>>>> v2.0.0
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
@@ -73,7 +95,11 @@ public class VistaArbolRN extends javax.swing.JPanel {
         txtAreaMostrarDatos.setRows(5);
         jScrollPane1.setViewportView(txtAreaMostrarDatos);
 
+<<<<<<< HEAD
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 510, 130));
+=======
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 510, 120));
+>>>>>>> v2.0.0
 
         btnRegresar.setBackground(new java.awt.Color(255, 51, 51));
         btnRegresar.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
@@ -84,18 +110,27 @@ public class VistaArbolRN extends javax.swing.JPanel {
                 btnRegresarActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
         jPanel1.add(btnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 510, -1, -1));
+=======
+        jPanel1.add(btnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 590, -1, -1));
+>>>>>>> v2.0.0
 
         txtValorEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtValorEliminarActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
         jPanel1.add(txtValorEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 300, 70, -1));
+=======
+        jPanel1.add(txtValorEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 290, 70, -1));
+>>>>>>> v2.0.0
 
         jLabel3.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Ingrese un valor para eliminar del Arbol Rojo y Negro:");
+<<<<<<< HEAD
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, -1, -1));
 
         textAreaMostrarDespuesEliminar.setColumns(20);
@@ -103,6 +138,9 @@ public class VistaArbolRN extends javax.swing.JPanel {
         jScrollPane2.setViewportView(textAreaMostrarDespuesEliminar);
 
         jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 510, 130));
+=======
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, -1, -1));
+>>>>>>> v2.0.0
 
         btnEliminar.setBackground(new java.awt.Color(255, 102, 102));
         btnEliminar.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
@@ -113,7 +151,27 @@ public class VistaArbolRN extends javax.swing.JPanel {
                 btnEliminarActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
         jPanel1.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 330, -1, -1));
+=======
+        jPanel1.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 320, -1, -1));
+
+        dibujo.setName("dibujo"); // NOI18N
+
+        javax.swing.GroupLayout dibujoLayout = new javax.swing.GroupLayout(dibujo);
+        dibujo.setLayout(dibujoLayout);
+        dibujoLayout.setHorizontalGroup(
+            dibujoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 510, Short.MAX_VALUE)
+        );
+        dibujoLayout.setVerticalGroup(
+            dibujoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 200, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(dibujo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 510, 200));
+        dibujo.getAccessibleContext().setAccessibleParent(dibujo);
+>>>>>>> v2.0.0
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -123,7 +181,11 @@ public class VistaArbolRN extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 546, Short.MAX_VALUE)
+=======
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 633, Short.MAX_VALUE)
+>>>>>>> v2.0.0
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -168,6 +230,10 @@ public class VistaArbolRN extends javax.swing.JPanel {
                 try {
                     int intValue = Integer.parseInt(valor);
                     arbol.insertar(intValue);
+<<<<<<< HEAD
+=======
+                    dibujoArbol.repaint();
+>>>>>>> v2.0.0
                 } catch (NumberFormatException e) {
                     JOptionPane.showMessageDialog(this, "Por favor ingrese solo números enteros separados por espacios.");
                     return;
@@ -185,6 +251,10 @@ public class VistaArbolRN extends javax.swing.JPanel {
                 int intValue = Integer.parseInt(valorEliminar);
                 arbol.eliminar(intValue);
                 mostrarResultadosDespuesEliminar();
+<<<<<<< HEAD
+=======
+                dibujoArbol.repaint();
+>>>>>>> v2.0.0
             } catch (NumberFormatException e) {
                 JOptionPane.showMessageDialog(this, "Por favor ingrese un número entero para eliminar.");
             }
@@ -212,7 +282,11 @@ public class VistaArbolRN extends javax.swing.JPanel {
         resultados.append(getRecorridoPreorden()).append("\n");
         resultados.append("Recorrido postorden del árbol Rojo y Negro después de eliminar:\n");
         resultados.append(getRecorridoPostorden()).append("\n");
+<<<<<<< HEAD
         textAreaMostrarDespuesEliminar.setText(resultados.toString());
+=======
+        txtAreaMostrarDatos.setText(resultados.toString());
+>>>>>>> v2.0.0
     }
 
     private String getRecorridoInorden() {
@@ -261,13 +335,20 @@ public class VistaArbolRN extends javax.swing.JPanel {
     private javax.swing.JButton btnEliminar;
     private javax.swing.JButton btnEnviar;
     private javax.swing.JButton btnRegresar;
+<<<<<<< HEAD
+=======
+    private javax.swing.JPanel dibujo;
+>>>>>>> v2.0.0
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+<<<<<<< HEAD
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea textAreaMostrarDespuesEliminar;
+=======
+>>>>>>> v2.0.0
     private javax.swing.JTextArea txtAreaMostrarDatos;
     private javax.swing.JTextField txtDatosEntrada;
     private javax.swing.JTextField txtValorEliminar;

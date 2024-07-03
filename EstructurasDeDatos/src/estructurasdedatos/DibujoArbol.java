@@ -11,12 +11,24 @@ import javax.swing.JPanel;
  *
  * @author Alexis y Daniel
  */
+<<<<<<< HEAD
 public class DibujoArbol extends JPanel {
 
     private ArbolAVL arbolAVL;
 
     public DibujoArbol(ArbolAVL arbolAVL) {
         this.arbolAVL = arbolAVL;
+=======
+
+//FUNCIONA PARA TODOS LOS ARBOLES
+
+public class DibujoArbol extends JPanel {
+
+    private ArbolBinario arbol;
+
+    public DibujoArbol(ArbolBinario arbol) {
+        this.arbol = arbol;
+>>>>>>> v2.0.0
         initComponents();
     }   
 
@@ -38,6 +50,7 @@ public class DibujoArbol extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
+<<<<<<< HEAD
         if (arbolAVL != null && arbolAVL.raiz != null) {
             dibujarNodo(g, arbolAVL.raiz, getWidth() / 2, 30, getWidth() / 4);
         }
@@ -52,6 +65,34 @@ public class DibujoArbol extends JPanel {
         g.fillOval(x - 15, y - 15, 30, 30);
         g.setColor(Color.WHITE);
         g.drawString(Integer.toString(nodo.valor), x - 6, y + 4);
+=======
+        if (arbol != null && arbol.raiz != null) {
+            dibujarNodo(g, arbol.raiz, getWidth() / 2, 30, getWidth() / 4);
+        }
+    }
+
+    private void dibujarNodo(Graphics g, NodosArbol nodo, int x, int y, int xOffset) {
+        if (nodo == null) {
+            return;
+        }
+        
+        if (nodo.color == Colores.NEGRO) {
+            g.setColor(Color.BLACK);
+            g.fillOval(x - 15, y - 15, 30, 30);
+            g.setColor(Color.WHITE);
+            g.drawString(Integer.toString(nodo.valor), x - 6, y + 4);
+        } else if (nodo.color == Colores.ROJO) {
+            g.setColor(Color.RED);
+            g.fillOval(x - 15, y - 15, 30, 30);
+            g.setColor(Color.BLACK);
+            g.drawString(Integer.toString(nodo.valor), x - 6, y + 4);
+        } else {
+            g.setColor(Color.YELLOW);
+            g.fillOval(x - 15, y - 15, 30, 30);
+            g.setColor(Color.BLACK);
+            g.drawString(Integer.toString(nodo.valor), x - 6, y + 4);
+        }
+>>>>>>> v2.0.0
 
         if (nodo.izquierdo != null) {
             g.drawLine(x - 15, y + 15, x - xOffset, y + 50);

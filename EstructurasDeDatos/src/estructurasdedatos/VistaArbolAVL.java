@@ -203,12 +203,72 @@ public class VistaArbolAVL extends javax.swing.JPanel {
         StringBuilder datos = new StringBuilder();
         arbolAVL.recorrerInorden();
         txtAreaMostrarDatos.setText(datos.toString());
+<<<<<<< HEAD
+=======
+        
+        StringBuilder sb = new StringBuilder();
+        sb.append("Recorrido Inorden: ").append(obtenerRecorridoInorden()).append("\n");
+        sb.append("Recorrido Preorden: ").append(obtenerRecorridoPreorden()).append("\n");
+        sb.append("Recorrido Postorden: ").append(obtenerRecorridoPostorden()).append("\n");
+        txtAreaMostrarDatos.setText(sb.toString());
+>>>>>>> v2.0.0
     }
 
     private void actualizarAreaMostrarDatosDespuesEliminar() {
         StringBuilder datos = new StringBuilder();
         arbolAVL.recorrerInorden();
         txtAreaMostrarDatos.setText(datos.toString());
+<<<<<<< HEAD
+=======
+        
+        StringBuilder sb = new StringBuilder();
+        sb.append("Recorrido Inorden: ").append(obtenerRecorridoInorden()).append("\n");
+        sb.append("Recorrido Preorden: ").append(obtenerRecorridoPreorden()).append("\n");
+        sb.append("Recorrido Postorden: ").append(obtenerRecorridoPostorden()).append("\n");
+        txtAreaMostrarDatos.setText(sb.toString());
+    }
+    
+    private String obtenerRecorridoInorden() {
+        StringBuilder sb = new StringBuilder();
+        obtenerRecorridoInordenRec(arbolAVL.raiz, sb);
+        return sb.toString();
+    }
+
+    private void obtenerRecorridoInordenRec(NodosArbol nodo, StringBuilder sb) {
+        if (nodo != null) {
+            obtenerRecorridoInordenRec(nodo.izquierdo, sb);
+            sb.append(nodo.valor).append(" ");
+            obtenerRecorridoInordenRec(nodo.derecho, sb);
+        }
+    }
+
+    private String obtenerRecorridoPreorden() {
+        StringBuilder sb = new StringBuilder();
+        obtenerRecorridoPreordenRec(arbolAVL.raiz, sb);
+        return sb.toString();
+    }
+
+    private void obtenerRecorridoPreordenRec(NodosArbol nodo, StringBuilder sb) {
+        if (nodo != null) {
+            sb.append(nodo.valor).append(" ");
+            obtenerRecorridoPreordenRec(nodo.izquierdo, sb);
+            obtenerRecorridoPreordenRec(nodo.derecho, sb);
+        }
+    }
+
+    private String obtenerRecorridoPostorden() {
+        StringBuilder sb = new StringBuilder();
+        obtenerRecorridoPostordenRec(arbolAVL.raiz, sb);
+        return sb.toString();
+    }
+
+    private void obtenerRecorridoPostordenRec(NodosArbol nodo, StringBuilder sb) {
+        if (nodo != null) {
+            obtenerRecorridoPostordenRec(nodo.izquierdo, sb);
+            obtenerRecorridoPostordenRec(nodo.derecho, sb);
+            sb.append(nodo.valor).append(" ");
+        }
+>>>>>>> v2.0.0
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
