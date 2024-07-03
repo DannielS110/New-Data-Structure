@@ -1,37 +1,21 @@
 package estructurasdedatos;
 
-<<<<<<< HEAD
-public class ArbolAVL {
-
-    NodosArbolAVL raiz;
-
-=======
 public class ArbolAVL extends ArbolBinario implements Recorridos{
->>>>>>> v2.0.0
     // Constructor para crear un árbol AVL vacío
     public ArbolAVL() {
         raiz = null;
     }
 
     // Método para insertar un nuevo nodo en el árbol AVL
-<<<<<<< HEAD
-=======
     @Override
->>>>>>> v2.0.0
     public void insertar(int valor) {
         raiz = insertarRec(raiz, valor);
     }
 
     // Método recursivo para insertar un nuevo nodo
-<<<<<<< HEAD
-    private NodosArbolAVL insertarRec(NodosArbolAVL nodo, int valor) {
-        if (nodo == null) {
-            return new NodosArbolAVL(valor);
-=======
     private NodosArbol insertarRec(NodosArbol nodo, int valor) {
         if (nodo == null) {
             return new NodosArbol(valor);
->>>>>>> v2.0.0
         }
 
         if (valor < nodo.valor) {
@@ -51,15 +35,9 @@ public class ArbolAVL extends ArbolBinario implements Recorridos{
     }
 
     // Método para realizar una rotación a la izquierda
-<<<<<<< HEAD
-    private NodosArbolAVL rotacionIzquierda(NodosArbolAVL x) {
-        NodosArbolAVL y = x.derecho;
-        NodosArbolAVL T2 = y.izquierdo;
-=======
     private NodosArbol rotacionIzquierda(NodosArbol x) {
         NodosArbol y = x.derecho;
         NodosArbol T2 = y.izquierdo;
->>>>>>> v2.0.0
 
         // Realizar rotación
         y.izquierdo = x;
@@ -74,15 +52,9 @@ public class ArbolAVL extends ArbolBinario implements Recorridos{
     }
 
     // Método para realizar una rotación a la derecha
-<<<<<<< HEAD
-    private NodosArbolAVL rotacionDerecha(NodosArbolAVL y) {
-        NodosArbolAVL x = y.izquierdo;
-        NodosArbolAVL T2 = x.derecho;
-=======
     private NodosArbol rotacionDerecha(NodosArbol y) {
         NodosArbol x = y.izquierdo;
         NodosArbol T2 = x.derecho;
->>>>>>> v2.0.0
 
         // Realizar rotación
         x.derecho = y;
@@ -97,20 +69,12 @@ public class ArbolAVL extends ArbolBinario implements Recorridos{
     }
 
     // Método para actualizar la altura de un nodo
-<<<<<<< HEAD
-    private void actualizarAltura(NodosArbolAVL nodo) {
-=======
     private void actualizarAltura(NodosArbol nodo) {
->>>>>>> v2.0.0
         nodo.altura = 1 + Math.max(altura(nodo.izquierdo), altura(nodo.derecho));
     }
 
     // Método para obtener la altura de un nodo
-<<<<<<< HEAD
-    private int altura(NodosArbolAVL nodo) {
-=======
     private int altura(NodosArbol nodo) {
->>>>>>> v2.0.0
         if (nodo == null) {
             return 0;
         }
@@ -118,11 +82,7 @@ public class ArbolAVL extends ArbolBinario implements Recorridos{
     }
 
     // Método para obtener el factor de balance de un nodo
-<<<<<<< HEAD
-    private int obtenerBalance(NodosArbolAVL nodo) {
-=======
     private int obtenerBalance(NodosArbol nodo) {
->>>>>>> v2.0.0
         if (nodo == null) {
             return 0;
         }
@@ -130,11 +90,7 @@ public class ArbolAVL extends ArbolBinario implements Recorridos{
     }
 
     // Método para equilibrar el árbol AVL
-<<<<<<< HEAD
-    private NodosArbolAVL equilibrar(NodosArbolAVL nodo) {
-=======
     private NodosArbol equilibrar(NodosArbol nodo) {
->>>>>>> v2.0.0
         int balance = obtenerBalance(nodo);
 
         // Caso Izquierda Izquierda
@@ -163,19 +119,12 @@ public class ArbolAVL extends ArbolBinario implements Recorridos{
     }
 
     // Métodos de recorrido del árbol AVL
-<<<<<<< HEAD
-=======
     @Override
->>>>>>> v2.0.0
     public void recorrerInorden() {
         recorrerInordenRec(raiz);
     }
 
-<<<<<<< HEAD
-    private void recorrerInordenRec(NodosArbolAVL nodo) {
-=======
     private void recorrerInordenRec(NodosArbol nodo) {
->>>>>>> v2.0.0
         if (nodo != null) {
             recorrerInordenRec(nodo.izquierdo);
             System.out.print(nodo.valor + " ");
@@ -187,11 +136,7 @@ public class ArbolAVL extends ArbolBinario implements Recorridos{
         recorrerPreordenRec(raiz);
     }
 
-<<<<<<< HEAD
-    private void recorrerPreordenRec(NodosArbolAVL nodo) {
-=======
     private void recorrerPreordenRec(NodosArbol nodo) {
->>>>>>> v2.0.0
         if (nodo != null) {
             System.out.print(nodo.valor + " ");
             recorrerPreordenRec(nodo.izquierdo);
@@ -203,11 +148,7 @@ public class ArbolAVL extends ArbolBinario implements Recorridos{
         recorrerPostordenRec(raiz);
     }
 
-<<<<<<< HEAD
-    private void recorrerPostordenRec(NodosArbolAVL nodo) {
-=======
     private void recorrerPostordenRec(NodosArbol nodo) {
->>>>>>> v2.0.0
         if (nodo != null) {
             recorrerPostordenRec(nodo.izquierdo);
             recorrerPostordenRec(nodo.derecho);
@@ -220,11 +161,7 @@ public class ArbolAVL extends ArbolBinario implements Recorridos{
         raiz = eliminarRec(raiz, valor);
     }
 
-<<<<<<< HEAD
-    private NodosArbolAVL eliminarRec(NodosArbolAVL nodo, int valor) {
-=======
     private NodosArbol eliminarRec(NodosArbol nodo, int valor) {
->>>>>>> v2.0.0
         if (nodo == null) {
             return nodo;
         }
@@ -236,11 +173,7 @@ public class ArbolAVL extends ArbolBinario implements Recorridos{
         } else {
             // Nodo con solo un hijo o sin hijos
             if ((nodo.izquierdo == null) || (nodo.derecho == null)) {
-<<<<<<< HEAD
-                NodosArbolAVL temp = null;
-=======
                 NodosArbol temp = null;
->>>>>>> v2.0.0
                 if (temp == nodo.izquierdo) {
                     temp = nodo.derecho;
                 } else {
@@ -256,11 +189,7 @@ public class ArbolAVL extends ArbolBinario implements Recorridos{
                 }
             } else {
                 // Nodo con dos hijos
-<<<<<<< HEAD
-                NodosArbolAVL temp = minValueNode(nodo.derecho);
-=======
                 NodosArbol temp = minValueNode(nodo.derecho);
->>>>>>> v2.0.0
                 nodo.valor = temp.valor;
                 nodo.derecho = eliminarRec(nodo.derecho, temp.valor);
             }
@@ -278,13 +207,8 @@ public class ArbolAVL extends ArbolBinario implements Recorridos{
     }
 
     // Obtener el nodo con el valor mínimo
-<<<<<<< HEAD
-    private NodosArbolAVL minValueNode(NodosArbolAVL nodo) {
-        NodosArbolAVL current = nodo;
-=======
     private NodosArbol minValueNode(NodosArbol nodo) {
         NodosArbol current = nodo;
->>>>>>> v2.0.0
 
         // Bucle para encontrar el nodo más a la izquierda
         while (current.izquierdo != null) {
