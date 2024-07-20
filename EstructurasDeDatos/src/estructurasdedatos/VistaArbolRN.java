@@ -8,6 +8,11 @@ public class VistaArbolRN extends javax.swing.JPanel {
 
     /**
      * Creates new form VistaArbolRN
+
+public class VistaArbolRN extends javax.swing.JPanel {
+
+    /**
+     * Creates new form VistaArbolRN
      */
     private ArbolRojoNegro arbol;
     private DibujoArbol dibujoArbol;
@@ -114,6 +119,7 @@ public class VistaArbolRN extends javax.swing.JPanel {
         });
         jPanel1.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 320, -1, -1));
 
+        dibujo.setBackground(new java.awt.Color(102, 102, 102));
         dibujo.setName("dibujo"); // NOI18N
 
         javax.swing.GroupLayout dibujoLayout = new javax.swing.GroupLayout(dibujo);

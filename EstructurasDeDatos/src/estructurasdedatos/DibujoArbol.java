@@ -56,12 +56,12 @@ public class DibujoArbol extends JPanel {
         } else if (nodo.color == Colores.ROJO) {
             g.setColor(Color.RED);
             g.fillOval(x - 15, y - 15, 30, 30);
-            g.setColor(Color.BLACK);
+            g.setColor(Color.WHITE);
             g.drawString(Integer.toString(nodo.valor), x - 6, y + 4);
         } else {
             g.setColor(Color.YELLOW);
             g.fillOval(x - 15, y - 15, 30, 30);
-            g.setColor(Color.BLACK);
+            g.setColor(Color.WHITE);
             g.drawString(Integer.toString(nodo.valor), x - 6, y + 4);
         }
 

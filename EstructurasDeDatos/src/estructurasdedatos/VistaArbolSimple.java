@@ -88,6 +88,7 @@ public class VistaArbolSimple extends javax.swing.JPanel {
         jLabel3.setText("Ingrese los valores para el árbol simple (separados por espacios):");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
 
+        dibujo.setBackground(new java.awt.Color(102, 102, 102));
         dibujo.setName("dibujo"); // NOI18N
 
         javax.swing.GroupLayout dibujoLayout = new javax.swing.GroupLayout(dibujo);

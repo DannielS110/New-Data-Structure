@@ -115,6 +115,7 @@ public class VistaArbolAVL extends javax.swing.JPanel {
         });
         jPanel1.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, -1, -1));
 
+        jPanel2.setBackground(new java.awt.Color(102, 102, 102));
         jPanel2.setAutoscrolls(true);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);

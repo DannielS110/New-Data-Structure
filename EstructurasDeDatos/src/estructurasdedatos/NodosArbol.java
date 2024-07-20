@@ -11,6 +11,6 @@ public class NodosArbol {
         valor = item;
         altura = 0;
         izquierdo = derecho = null;
-        color = Colores.SC; // Por defecto, todos los nodos se insertan como ROJOS
+        color = Colores.ROJO; // Por defecto, todos los nodos se insertan como ROJOS
     }
 }
