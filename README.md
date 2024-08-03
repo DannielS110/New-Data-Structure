@@ -7,9 +7,11 @@ Diagrama de Estructura de Datos
 ![image](https://github.com/user-attachments/assets/a045e28d-112b-4476-9f16-ae5b6577ff3c)
 ![image](https://github.com/user-attachments/assets/7350f299-6227-4126-acc2-fd471354a69e)
 ![image](https://github.com/user-attachments/assets/8716c6c2-624b-4cf2-b19d-83255918d30b)
+
 eliminando un valor
 ![image](https://github.com/user-attachments/assets/fb885bc2-86c7-4b66-92c7-d38f8cdd8c1c)
 ![image](https://github.com/user-attachments/assets/5e63542f-9bc5-400f-b947-351ae4c76b7a)
+
 eliminando un valor
 ![image](https://github.com/user-attachments/assets/e3b5b96d-c106-4bc9-8633-cdf580455acf)
 ![image](https://github.com/user-attachments/assets/a1096038-5bc4-4fd8-895c-d9981df650c1)
